@@ -1,11 +1,20 @@
-import React from 'react'
+import React from 'react';
+import { useState} from 'react'
+
 
 const Home = () => {
-  return (
-    <div className="home">
-        <h2>Homepage</h2>
-    </div>
-  )
-}
+    const [name, setName] = useState('Zbys');
 
-export default Home
+	const handleClick = () => {
+		setName('Aga')
+	};
+	return (
+		<div className="home">
+			<h2>Homepage</h2>
+			<p>{name}</p>
+			<button onClick={handleClick}>Click me</button>
+		</div>
+	);
+};
+
+export default Home;
