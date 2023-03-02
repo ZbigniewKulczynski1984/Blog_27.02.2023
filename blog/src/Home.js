@@ -19,9 +19,11 @@ const Home = () => {
 				.then((data) => {
 					setIsPending(false);
 					setBlogs(data);
+					setError(null);
 				})
 				.catch((err) => {
 					setError(err.message);
+					setIsPending(false);
 				});
 		}, 500);
 	}, []);
