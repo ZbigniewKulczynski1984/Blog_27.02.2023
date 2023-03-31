@@ -1,3 +1,4 @@
 # Blog
 
 ## React
+## JavaScript
